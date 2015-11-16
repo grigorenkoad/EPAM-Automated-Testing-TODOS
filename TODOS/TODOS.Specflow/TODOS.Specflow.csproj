@@ -52,31 +52,52 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Steps\D_RemoveTasksSteps.cs" />
+    <Compile Include="Features\D_RemoveTasks.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>D_RemoveTasks.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Steps\C_MarkTasksSteps.cs" />
+    <Compile Include="Features\C_MarkTasks.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>C_MarkTasks.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Steps\B_DataEntrySteps.cs" />
+    <Compile Include="Features\B_DataEntry.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>B_DataEntry.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\A_OpenPage.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>A_OpenPage.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Steps\ControlScenario.cs" />
+    <Compile Include="Steps\A_OpenPageSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TODOSFeatureSteps.cs" />
-    <Compile Include="TODOSFeature.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TODOSFeature.feature</DependentUpon>
-    </Compile>
-    <Compile Include="TODOSFeature2.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TODOSFeature2.feature</DependentUpon>
-    </Compile>
-    <Compile Include="TODOSFeature2Steps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Features\B_DataEntry.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>B_DataEntry.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\A_OpenPage.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>A_OpenPage.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\C_MarkTasks.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>C_MarkTasks.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\D_RemoveTasks.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>D_RemoveTasks.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
-    <None Include="TODOSFeature.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>TODOSFeature.feature.cs</LastGenOutput>
-    </None>
-    <None Include="TODOSFeature2.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>TODOSFeature2.feature.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TODOS\TODOS.csproj">

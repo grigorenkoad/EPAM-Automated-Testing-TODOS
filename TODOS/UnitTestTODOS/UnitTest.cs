@@ -30,7 +30,8 @@ namespace UnitTestTODOS
         [Test]
         public void A_RightPage()
         {
-            Page.RightTitle();
+            string title = "AngularJS • TodoMVC";
+            Page.RightTitle(title);
         }
 
         [Test]

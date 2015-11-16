@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace TODOS.Specflow
+namespace TODOS.Specflow.Features
 {
     using TechTalk.SpecFlow;
     
@@ -19,20 +19,20 @@ namespace TODOS.Specflow
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("TODOSFeature")]
-    public partial class TODOSFeatureFeature
+    [NUnit.Framework.DescriptionAttribute("C_MarkTasks")]
+    public partial class C_MarkTasksFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "TODOSFeature.feature"
+#line 1 "C_MarkTasks.feature"
 #line hidden
         
         [NUnit.Framework.TestFixtureSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TODOSFeature", "check names,\r\ndata input,\r\ncheck counter", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "C_MarkTasks", "I want to point out completed tasks\nand see how to change their number", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -65,35 +65,35 @@ namespace TODOS.Specflow
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("A_CheckName")]
-        [NUnit.Framework.CategoryAttribute("OpenPage")]
-        public virtual void A_CheckName()
+        [NUnit.Framework.DescriptionAttribute("A_Marked two tasks")]
+        public virtual void A_MarkedTwoTasks()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A_CheckName", new string[] {
-                        "OpenPage"});
-#line 7
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A_Marked two tasks", ((string[])(null)));
+#line 5
 this.ScenarioSetup(scenarioInfo);
+#line 6
+ testRunner.Given("I go to the Active tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 7
+ testRunner.When("I marked two tasks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 8
- testRunner.When("I am on the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("on the tab Completed to be displayed two tasks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 9
- testRunner.Then("the title should be \"AngularJS • TodoMVC\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("must appear ClearCompleted element", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("B_DataInput")]
-        [NUnit.Framework.CategoryAttribute("DataEntry")]
-        public virtual void B_DataInput()
+        [NUnit.Framework.DescriptionAttribute("B_Clear completed tasks")]
+        public virtual void B_ClearCompletedTasks()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("B_DataInput", new string[] {
-                        "DataEntry"});
-#line 12
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("B_Clear completed tasks", ((string[])(null)));
+#line 11
 this.ScenarioSetup(scenarioInfo);
+#line 12
+ testRunner.When("I click on button ClearCompleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
- testRunner.When("I am enter ten tasks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 14
- testRunner.Then("counter shoul be equal ten", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("on the tab Completed to be displayed zero tasks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

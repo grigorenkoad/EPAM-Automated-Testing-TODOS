@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace TODOS.Specflow
+namespace TODOS.Specflow.Features
 {
     using TechTalk.SpecFlow;
     
@@ -19,20 +19,20 @@ namespace TODOS.Specflow
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("TODOSFeature2")]
-    public partial class TODOSFeature2Feature
+    [NUnit.Framework.DescriptionAttribute("D_RemoveTasks")]
+    public partial class D_RemoveTasksFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "TODOSFeature2.feature"
+#line 1 "D_RemoveTasks.feature"
 #line hidden
         
         [NUnit.Framework.TestFixtureSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TODOSFeature2", "", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "D_RemoveTasks", "I want to remove tasks \nand count their number", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -65,52 +65,33 @@ namespace TODOS.Specflow
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("All")]
-        [NUnit.Framework.CategoryAttribute("FooterElementAll")]
-        public virtual void All()
+        [NUnit.Framework.DescriptionAttribute("A_Remove one task")]
+        public virtual void A_RemoveOneTask()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("All", new string[] {
-                        "FooterElementAll"});
-#line 5
-this.ScenarioSetup(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A_Remove one task", ((string[])(null)));
 #line 6
- testRunner.When("I press all", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 7
- testRunner.Then("counter shoul be equal ten", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I Remove one task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 8
+ testRunner.Then("their stays seven", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Active")]
-        [NUnit.Framework.CategoryAttribute("FooterElementsActive")]
-        public virtual void Active()
+        [NUnit.Framework.DescriptionAttribute("B_Remove all tasks")]
+        [NUnit.Framework.CategoryAttribute("Teardown")]
+        public virtual void B_RemoveAllTasks()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Active", new string[] {
-                        "FooterElementsActive"});
-#line 10
-this.ScenarioSetup(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("B_Remove all tasks", new string[] {
+                        "Teardown"});
 #line 11
- testRunner.When("I press active", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 12
- testRunner.Then("counter shoul be equal ten", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Complited")]
-        [NUnit.Framework.CategoryAttribute("FooterElementsCompleted")]
-        public virtual void Complited()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complited", new string[] {
-                        "FooterElementsCompleted"});
-#line 15
 this.ScenarioSetup(scenarioInfo);
-#line 16
- testRunner.When("I press complrtrd", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 17
- testRunner.Then("counter shoul be equal zero", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 12
+ testRunner.When("I Remove all tasks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 13
+ testRunner.Then("their stays zero", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

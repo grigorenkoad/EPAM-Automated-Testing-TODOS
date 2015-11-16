@@ -13,7 +13,7 @@ namespace TODOS
 {
     public class MainPage : Page
     {
-        private const How how = How.CssSelector;
+        private const How how = How.XPath;
         private const string url = "http://todomvc.com/examples/angularjs/#/";
         private const int countTask = 10;
         private const int activeTask = 8;
@@ -68,10 +68,11 @@ namespace TODOS
             Assert.IsTrue(MainInput.Displayed);
         }
 
-        public void RightTitle()
+        public void RightTitle(string title)
         {
-            Assert.AreEqual("AngularJS • TodoMVC", Driver.Title);
+            Assert.AreEqual(title, Driver.Title);
         }
+
 
         public void DataEntry()
         {
