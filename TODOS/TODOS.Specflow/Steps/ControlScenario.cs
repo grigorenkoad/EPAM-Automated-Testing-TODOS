@@ -13,11 +13,13 @@ namespace TODOS.Specflow.Steps
     public class ControlScenario
     {
         public static IWebDriver Driver { get; set; }
+        public static MainPage Page { get; set; }
 
         [BeforeScenario("Setup")]
         public void SetupDriver()
         {
             Driver = new ChromeDriver();
+            Page = new MainPage(Driver);
         }
 
         [AfterScenario("Teardown")]

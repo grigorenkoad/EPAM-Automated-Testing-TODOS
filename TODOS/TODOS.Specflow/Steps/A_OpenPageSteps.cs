@@ -3,31 +3,29 @@ using TechTalk.SpecFlow;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using TODOS.Specflow.Steps;
+using NUnit.Framework;
 
 namespace TODOS.Specflow
 {
     [Binding]
     public class OpenPageSteps
     {
-        public MainPage Page { get; set; }
-        
-
         [When(@"I go to the page")]
         public void WhenIGoToThePage()
         {
-            Page = new MainPage(ControlScenario.Driver);
+            Assert.IsTrue(true);
         }
         
         [Then(@"the title should be ""(.*)""")]
         public void ThenTheTitleShouldBe(string title)
         {
-            Page.RightTitle(title);
+            ControlScenario.Page.RightTitle(title);
         }
         
         [Then(@"element should be present")]
         public void ThenElementShouldBePresent()
         {
-            Page.InputExist();
+            ControlScenario.Page.InputExist();
         }
     }
 }

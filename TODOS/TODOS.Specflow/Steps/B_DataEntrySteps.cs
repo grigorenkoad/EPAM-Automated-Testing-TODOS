@@ -8,36 +8,34 @@ namespace TODOS.Specflow
     [Binding]
     public class B_DataEntrySteps
     {
-        public MainPage Page = new MainPage(ControlScenario.Driver);
-
         [When(@"I add ten tasks")]
         public void WhenIAddTenTasks()
         {
-            Page.DataEntry();
+            ControlScenario.Page.DataEntry();
         }
 
         [Then(@"must appear footer elements")]
         public void ThenMustAppearFooterElements()
         {
-            Page.FooterElementsDisplayed();
+            ControlScenario.Page.FooterElementsDisplayed();
         }
         
         [Then(@"on the tab All to be displayed ten tasks")]
         public void ThenOnTheTabAllToBeDisplayedTenTasks()
         {
-            Page.ToDoCountAll();
+            ControlScenario.Page.ToDoCountAll();
         }
         
         [Then(@"on the tab Active to be displayed ten tasks")]
         public void ThenOnTheTabActiveToBeDisplayedTenTasks()
         {
-            Page.ToDoCountActive();
+            ControlScenario.Page.ToDoCountActive();
         }
         
         [Then(@"on the tab Completed to be displayed zero tasks")]
         public void ThenOnTheTabCompletedToBeDisplayedZeroTasks()
         {
-            Page.ToDoCountComlitedBefore();
+            ControlScenario.Page.ToDoCountComlitedBefore();
         }
     }
 }

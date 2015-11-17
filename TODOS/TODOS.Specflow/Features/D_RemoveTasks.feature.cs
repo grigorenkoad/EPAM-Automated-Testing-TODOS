@@ -81,11 +81,9 @@ this.ScenarioSetup(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("B_Remove all tasks")]
-        [NUnit.Framework.CategoryAttribute("Teardown")]
         public virtual void B_RemoveAllTasks()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("B_Remove all tasks", new string[] {
-                        "Teardown"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("B_Remove all tasks", ((string[])(null)));
 #line 11
 this.ScenarioSetup(scenarioInfo);
 #line 12

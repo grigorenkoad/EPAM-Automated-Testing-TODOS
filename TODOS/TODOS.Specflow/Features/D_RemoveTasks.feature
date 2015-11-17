@@ -7,7 +7,7 @@ Scenario: A_Remove one task
 	When I Remove one task
 	Then their stays seven
 
-@Teardown
+
 Scenario: B_Remove all tasks
 	When I Remove all tasks
 	Then their stays zero
